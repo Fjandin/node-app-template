@@ -5,10 +5,10 @@
   "license": "MIT",
   "scripts": {
     "type-check": "tsc --noEmit",
-    "start:dev": "nodemon --exec babel-node --inspect=0.0.0.0:9901 --extensions=.ts ./src/index.ts",
+    "start:dev": "nodemon --exec babel-node --inspect=0.0.0.0:9901 --extensions=.ts --source-maps=inline ./src/index.ts",
     "build": "rm -rf ./dist && yarn build:types && yarn build:js",
     "build:types": "tsc --emitDeclarationOnly",
-    "build:js": "babel src --out-dir dist --extensions .ts --source-maps inline",
+    "build:js": "babel src --out-dir=dist --extensions=.ts --source-maps=inline",
     "eslint": "eslint src --ext .ts",
     "test": "jest"
   },
