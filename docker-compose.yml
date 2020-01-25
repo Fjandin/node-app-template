@@ -1,0 +1,20 @@
+version: '3.7'
+services:
+    app:
+        tty: true
+        restart: unless-stopped
+        hostname: app
+        command: ['yarn', 'start:dev']
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        ports:
+            - 8081:8081
+            - 8181:8181
+            - 9901:9901
+        environment:
+            TERM: xterm
+            NODE_ENV: development
+        volumes:
+            - ./:/home/node/app
+            - /home/node/app/node_modules

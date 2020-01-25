@@ -1,0 +1,8 @@
+Dockerfile
+.git/
+.github/
+.vscode/
+coverage/
+dist/
+node_modules/
+yarn-error.log
