@@ -11,7 +11,8 @@ module.exports = {
     modulePaths: ['<rootDir>/src/'],
     moduleFileExtensions: ['ts', 'js'],
     transform: {
-        '^.+\\.ts$': 'ts-jest'
+        '^.+\\.ts$': 'ts-jest',
+        '^.+\\.js$': 'ts-jest'
     },
     setupFiles: ['<rootDir>/jest.setup.ts'],
     testPathIgnorePatterns: [],
