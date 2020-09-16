@@ -9,7 +9,10 @@
     "build": "rm -rf ./dist && yarn build:types && yarn build:js",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir=dist --extensions=.ts --source-maps=inline",
-    "eslint": "eslint src --ext .ts",
+    "lint": "eslint src --ext .ts",
+    "lint:changed": "git diff --name-only --diff-filter=ACMR origin/master | grep -E '^.*?\\.(t|j)s$' | grep -v eslint | xargs yarn eslint",
+    "lint:fix": "yarn lint --fix",
+    "lint:changed:fix": "yarn lint:changed --fix",
     "test": "jest"
   },
   "dependencies": {
