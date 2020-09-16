@@ -2,7 +2,6 @@ module.exports = {
     rootDir: __dirname,
     verbose: false,
     silent: false,
-    browser: false,
     testEnvironment: 'node',
     collectCoverage: true,
     coverageReporters: ['text-summary', 'lcov'],
@@ -12,9 +11,9 @@ module.exports = {
     moduleFileExtensions: ['ts', 'js'],
     transform: {
         '^.+\\.ts$': 'ts-jest',
-        '^.+\\.js$': 'ts-jest'
+        '^.+\\.js$': 'ts-jest',
     },
     setupFiles: ['<rootDir>/jest.setup.ts'],
     testPathIgnorePatterns: [],
-    resetMocks: false
+    resetMocks: false,
 }

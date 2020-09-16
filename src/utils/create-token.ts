@@ -9,8 +9,5 @@ export default (length = 64): string => {
         throw new Error('Length must be an integer between 1 and 512')
     }
 
-    return crypto
-        .randomBytes(length)
-        .toString('hex')
-        .substr(0, length)
+    return crypto.randomBytes(length).toString('hex').substr(0, length)
 }
